@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Puhelinluettelo fullstack",
   "main": "index.js",
+  "repository": "https://github.com/stadibo/fullstack_osa3",
   "scripts": {
     "start": "node index.js",
     "watch": "nodemon index.js",
