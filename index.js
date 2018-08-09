@@ -17,6 +17,7 @@ morganFormat = (tokens, req, res) => {
     ].join(' ')
 }
 
+app.use(express.static('build'))
 app.use(bodyParser.json())
 app.use(morgan(morganFormat))
 app.use(cors())
