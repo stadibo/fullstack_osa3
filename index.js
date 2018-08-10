@@ -154,6 +154,7 @@ app.put('/api/persons/:id', (req, res) => {
                 })
         })
         .catch(error => {
+            console.log('suuuuuuup')
             console.log(error)
             response.status(400).send({ error: 'malformatted id' })
         })
