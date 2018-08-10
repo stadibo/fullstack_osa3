@@ -35,7 +35,7 @@ app.get('/api/persons', (req, res) => {
         })
         .catch(error => {
             console.log(error)
-            response.status(404).end()
+            res.status(404).end()
         })
 })
 
@@ -48,12 +48,12 @@ app.get('/api/persons/:id', (req, res) => {
             if (person) {
                 res.json(Person.format(person))
             } else {
-                response.status(404).end()
+                res.status(404).end()
             }
         })
         .catch(error => {
             console.log(error)
-            response.status(400).send({ error: 'malformatted id' })
+            res.status(400).send({ error: 'malformatted id' })
         })
 })
 
@@ -70,7 +70,7 @@ app.get('/info', (req, res) => {
         })
         .catch(error => {
             console.log(error)
-            response.status(404).end()
+            res.status(404).end()
         })
 })
 
@@ -84,7 +84,7 @@ app.delete('/api/persons/:id', (req, res) => {
         })
         .catch(error => {
             console.log(error)
-            response.status(400).send({ error: 'malformatted id' })
+            res.status(400).send({ error: 'malformatted id' })
         })
 })
 
@@ -119,13 +119,13 @@ app.post('/api/persons', (req, res) => {
                     })
                     .catch(error => {
                         console.log(error)
-                        response.status(404).end()
+                        res.status(404).end()
                     })
             }
         })
         .catch(error => {
             console.log(error)
-            response.status(404).end()
+            res.status(404).end()
         })
 })
 
@@ -150,13 +150,13 @@ app.put('/api/persons/:id', (req, res) => {
                 })
                 .catch(error => {
                     console.log(error)
-                    response.status(404).end()
+                    res.status(404).end()
                 })
         })
         .catch(error => {
             console.log('suuuuuuup')
             console.log(error)
-            response.status(400).send({ error: 'malformatted id' })
+            res.status(400).send({ error: 'malformatted id' })
         })
 })
 
