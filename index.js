@@ -7,7 +7,7 @@ const Person = require('./models/person')
 
 morgan.token('body', (req, res) => JSON.stringify(req.body, null, 4))
 
-morganFormat = (tokens, req, res) => {
+const morganFormat = (tokens, req, res) => {
     return [
         tokens.method(req, res),
         tokens.url(req, res),
